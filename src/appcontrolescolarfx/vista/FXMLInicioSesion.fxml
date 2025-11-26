@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appcontrolescolarfx.controlador.FXMLInicioSesionController">
+   <children>
+      <Pane layoutX="6.0" layoutY="6.0" prefHeight="400.0" prefWidth="275.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="38.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../recursos/UVLogo.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="277.0" layoutY="6.0" prefHeight="400.0" prefWidth="275.0">
+         <children>
+            <Label layoutX="69.0" layoutY="59.0" text="¡Bienvenido!" textAlignment="CENTER">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="101.0" prefHeight="36.0" prefWidth="212.0" text="Para iniciar sesión, ingrese su número de personal y contraseña" textAlignment="CENTER" wrapText="true" />
+            <TextField fx:id="tfNoPersonal" layoutX="27.0" layoutY="181.0" prefHeight="25.0" prefWidth="221.0" text="jperez" />
+            <Label layoutX="28.0" layoutY="158.0" text="Número de Personal" />
+            <Label layoutX="27.0" layoutY="230.0" text="Contraseña" />
+            <PasswordField fx:id="pfContraseña" layoutX="27.0" layoutY="254.0" prefHeight="25.0" prefWidth="221.0" text="********" />
+            <Button layoutX="107.0" layoutY="310.0" mnemonicParsing="false" onAction="#clicIngresar" style="-fx-background-color: #040d80;" text="Ingresar" textFill="WHITE" />
+            <Label fx:id="lbErrorNoPersonal" layoutX="38.0" layoutY="212.0" textFill="RED">
+               <font>
+                  <Font size="8.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbErrorContraseña" layoutX="38.0" layoutY="285.0" textFill="RED">
+               <font>
+                  <Font size="8.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

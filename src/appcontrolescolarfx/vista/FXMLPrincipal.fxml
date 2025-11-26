@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appcontrolescolarfx.controlador.FXMLPrincipalController">
+   <children>
+      <Pane layoutY="71.0" prefHeight="380.0" prefWidth="651.0">
+         <children>
+            <Label fx:id="lbNombre" layoutX="115.0" layoutY="73.0" text="Nombre completo">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbNoPersonal" layoutX="115.0" layoutY="94.0" text="Número de personal" />
+            <Label layoutX="55.0" layoutY="37.0" text="Bienvenido(a)">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Button layoutX="354.0" layoutY="61.0" mnemonicParsing="false" onAction="#clicAdminProfesores" prefHeight="46.0" prefWidth="184.0" text="Administración de profesores" />
+            <Button layoutX="354.0" layoutY="134.0" mnemonicParsing="false" onAction="#clicAdminAlumnos" prefHeight="46.0" prefWidth="184.0" text="Administración de alumnos" />
+            <Button layoutX="354.0" layoutY="202.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="184.0" text="Administración de carreras" />
+            <Button layoutX="354.0" layoutY="270.0" mnemonicParsing="false" onAction="#clicCerrarSesion" prefHeight="46.0" prefWidth="184.0" text="Cerrar sesión" />
+         </children>
+      </Pane>
+      <Pane layoutY="-2.0" prefHeight="68.0" prefWidth="651.0" style="-fx-background-color: #040d80;">
+         <children>
+            <Label fx:id="lbRol" layoutX="471.0" layoutY="24.0" text="Rol:" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

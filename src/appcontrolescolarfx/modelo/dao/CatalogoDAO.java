@@ -2,6 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+
 package appcontrolescolarfx.modelo.dao;
 
 import java.sql.Connection;
@@ -33,6 +34,7 @@ public class CatalogoDAO {
         throw new SQLException("No hay conexión a la base de datos.");
     }
     
+    // Este método es el que llama la implementación
     public static ResultSet obtenerCarrerasPorFacultad(int idFacultad, Connection conexionBD) throws SQLException {
         if(conexionBD != null){
             String consulta = "SELECT * FROM carrera WHERE idFacultad = ? ORDER BY carrera";

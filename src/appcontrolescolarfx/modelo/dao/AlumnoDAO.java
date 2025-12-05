@@ -11,6 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class AlumnoDAO {
+
     public static ResultSet obtenerAlumnos(Connection conexionBD) throws SQLException {
         if(conexionBD != null){
             String consulta = "select idAlumno, nombre, apellidoPaterno, apellidoMaterno, matricula, "
@@ -39,7 +40,6 @@ public class AlumnoDAO {
             sentencia.setInt(7, alumno.getIdCarrera());
             sentencia.setInt(8, alumno.getIdFacultad());
             
-            // CORRECCIÓN: Manejar correctamente cuando foto es null
             if(alumno.getFoto() != null){
                 sentencia.setBytes(9, alumno.getFoto());
             } else {
@@ -81,7 +81,6 @@ public class AlumnoDAO {
             sentencia.setInt(6, alumno.getIdCarrera());
             sentencia.setInt(7, alumno.getIdFacultad());
             
-            // CORRECCIÓN: Manejar correctamente cuando foto es null
             if(alumno.getFoto() != null){
                 sentencia.setBytes(8, alumno.getFoto());
             } else {
@@ -113,13 +112,10 @@ public class AlumnoDAO {
             
             if(resultado.next()){
                 byte[] foto = resultado.getBytes("foto");
-                resultado.close();
-                sentencia.close();
+                // Es buena práctica cerrar recursos aunque se cierre la conexión después
+                // Pero aquí devolvemos el dato crudo.
                 return foto;
             }
-            
-            resultado.close();
-            sentencia.close();
             return null;
         }
         throw new SQLException("No hay conexión a la base de datos.");

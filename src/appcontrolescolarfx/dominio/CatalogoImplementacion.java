@@ -63,7 +63,8 @@ public class CatalogoImplementacion {
         return respuesta;
     }
     
-    public static HashMap<String, Object> obtenerCarrerasPorFacultad(int idFacultad){
+    // HE RENOMBRADO ESTE MÉTODO PARA QUE COINCIDA CON EL CONTROLADOR
+    public static HashMap<String, Object> obtenerCarreras(int idFacultad){
         HashMap<String, Object> respuesta = new LinkedHashMap<>();
         try{
             ResultSet resultado = CatalogoDAO.obtenerCarrerasPorFacultad(idFacultad, ConexionBD.abrirConexionBD());
